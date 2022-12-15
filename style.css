@@ -18,12 +18,13 @@ container {
   display: flex;
   flex-direction: column;
   padding: 2.7vh;
-  border-radius: 3%;
+  border-radius: 15px;
   -webkit-box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.58);
   box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.58);
-  width: 14%;
+  width: 240px;
+  transition: 0.5s;
 }
-.cardHeader p {
+h1 {
   font-weight: bold;
   color: white;
   font-size: 20px;
@@ -33,17 +34,17 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 96vh;
+  min-height: 96vh;
 }
 #ethImg {
   display: flex;
-  width: 10%;
+  width: 10px;
   align-self: center;
   margin-right: 5px;
 }
 #svgClock {
   display: flex;
-  width: 10%;
+  width: 16px;
   margin-right: 5px;
   fill: var(--textColor);
 }
@@ -52,7 +53,7 @@ main {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  width: 50%;
+  width: 200px;
 }
 .price p {
   color: var(--eth);
@@ -62,7 +63,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  width: 50%;
+  width: 140px;
 }
 .time p {
   font-weight: 400;
@@ -73,7 +74,7 @@ main {
   justify-content: space-between;
 }
 #avatar {
-  width: 10%;
+  width: 20px;
   margin-right: 5px;
   border: solid white;
   border-radius: 100%;
@@ -104,7 +105,7 @@ main {
 .cardText {
   font-size: 16px;
 }
-.attribution {
+footer {
   display: flex;
   justify-content: center;
   align-content: flex-end;
@@ -118,11 +119,17 @@ main {
   background-color: #1ed3cc;
   background-blend-mode: multiply;
 }
-.cardHeader p:hover {
+h1:hover {
   cursor: pointer;
   color: var(--eth);
 }
 .name:hover {
   cursor: pointer;
   color: var(--eth);
+}
+@media (max-width: 515px) {
+  container {
+    width: 300px;
+    transition: 0.5s;
+  }
 }
